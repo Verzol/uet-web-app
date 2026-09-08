@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant B as Trình duyệt
+    participant D as DNS
+    participant S as Web server (Nginx/Apache/IIS)
+    participant A as Ứng dụng
+    participant DB as Cơ sở dữ liệu
+
+    B->>D: Phân giải tên miền
+    D-->>B: Địa chỉ IP
+    B->>S: HTTP request (GET /trang)
+    S->>A: Chuyển yêu cầu cần xử lý động
+    A->>DB: Truy vấn dữ liệu
+    DB-->>A: Kết quả
+    A-->>S: HTML/JSON
+    S-->>B: HTTP response (200, nội dung)
+    B->>B: Dựng DOM, render, chạy JavaScript

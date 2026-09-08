@@ -1,0 +1,8 @@
+flowchart TD
+    WP["Trang web (web page): một tài liệu HTML, có URL riêng"] --> WS["Website: nhiều trang web liên kết dưới một tên miền"]
+    WS --> ST["Website tĩnh: nội dung cố định, chủ yếu để đọc"]
+    WS --> WA["Web application: người dùng thao tác, nhập liệu, hệ thống xử lý và lưu"]
+    WA --> SPA["SPA: tải một trang, JavaScript đổi nội dung"]
+    WA --> MPA["MPA: mỗi hành động nạp một trang mới do server dựng"]
+    WA --> PWA["PWA: web app cài được, chạy cả khi mất mạng"]
+    WA -. gọi .-> API["Web service / API: điểm cuối HTTP trả dữ liệu, không có giao diện"]

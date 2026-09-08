@@ -1,0 +1,12 @@
+{
+  "name": "uet-web-app",
+  "private": true,
+  "type": "module",
+  "description": "Tài liệu học INT3306 - Phát triển ứng dụng web",
+  "scripts": {
+    "assets": "node scripts/extract-assets.mjs"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.2"
+  }
+}

@@ -1,0 +1,12 @@
+flowchart LR
+    subgraph REQ[Request]
+      R1["Dòng đầu: GET /lects/int3306.htm HTTP/1.1"]
+      R2["Headers: Host, User-Agent, Accept, Cookie..."]
+      R3["Body: dữ liệu gửi lên (POST/PUT)"]
+    end
+    subgraph RES[Response]
+      S1["Dòng đầu: HTTP/1.1 200 OK"]
+      S2["Headers: Content-Type, Content-Length, Set-Cookie..."]
+      S3["Body: HTML, JSON, ảnh..."]
+    end
+    REQ --> RES
