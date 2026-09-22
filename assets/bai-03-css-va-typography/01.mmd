@@ -1,0 +1,9 @@
+flowchart TD
+    A["Nhiều rule cùng đặt một thuộc tính"] --> B{"Có !important?"}
+    B -->|Có| C["!important thắng rule thường"]
+    B -->|Không| D["So nguồn: user-agent < author < inline"]
+    C --> E["Nhiều !important: so specificity"]
+    D --> E
+    E --> F{"Specificity bằng nhau?"}
+    F -->|Không| G["Điểm cao hơn thắng"]
+    F -->|Có| H["Rule viết sau thắng"]

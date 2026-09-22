@@ -39,3 +39,5 @@ Chưa cài mermaid-cli thì lệnh vẫn chạy nhưng chỉ xuất `.mmd`. File
 ## Tiến độ
 
 - [x] Bài 1 – Kiến trúc ứng dụng web và HTTP
+- [x] Bài 2 – HTML và quản trị ứng dụng web
+- [x] Bài 3 – CSS và typography
