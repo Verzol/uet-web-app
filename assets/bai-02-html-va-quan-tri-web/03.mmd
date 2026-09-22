@@ -1,0 +1,4 @@
+flowchart LR
+    REQ["Request tới bulletin.any.com.vn hoặc hrm.any.com.vn"] --> NG["Nginx đọc header Host"]
+    NG -->|Host khớp| SB1["server block: bulletin.any.com.vn\nroot: thư mục riêng"]
+    NG -->|Host khớp| SB2["server block: hrm.any.com.vn\nroot: thư mục riêng"]

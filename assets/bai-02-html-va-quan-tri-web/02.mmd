@@ -1,0 +1,6 @@
+flowchart TD
+    A["Cài Nginx, gỡ Apache nếu có"] --> B["Cài PHP-FPM + PHP-MySQL"]
+    B --> C["Sửa php.ini: cgi.fix_pathinfo=0"]
+    C --> D["Cấu hình Nginx nối PHP-FPM qua socket"]
+    D --> E["Cài MySQL server"]
+    E --> F["Cài phpMyAdmin, tạo symbolic link để truy cập qua trình duyệt"]
