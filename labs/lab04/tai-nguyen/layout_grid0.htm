@@ -1,0 +1,98 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Grid 0</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+		a {text-decoration:none;}
+        div.acknowledgment {color:#999;font-size:x-small;text-align:center;margin-top:30px;margin-bottom:30px;}
+
+        header, footer, .container > div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(207,232,220);
+            border: 2px solid rgb(79,185,227);
+        }
+
+        aside {
+            border-right: 1px solid #999;
+        }
+
+
+		.container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+		/* grid items */
+		header {
+		  grid-column: 1 / 5;
+		  grid-row: 1;
+		}
+
+		article {
+		  grid-column: 2 / 5;
+		  grid-row: 2;
+		}
+
+		aside {
+		  grid-column: 1;
+		  grid-row: 2;
+		}
+
+		footer {
+		  grid-column: 1 / 3;
+		  grid-row: 3;
+		}
+		div {
+		  grid-column: 3 / 5;
+		  grid-row: 3;
+		}
+
+		@media (max-width:600px) {
+			.container {display:block;	}
+			aside { border-right: none; }
+		}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>This is my lovely blog</header>
+        <article>
+                <h1>My article</h1>
+                <p>Duis felis orci, pulvinar id metus ut, rutrum luctus 
+orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit 
+amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique 
+sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus 
+neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+ volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin 
+eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
+ quam nec lacus varius commodo et a urna. Ut id ornare felis, eget 
+fermentum sapien.</p>
+
+                <p>Nam vulputate diam nec tempor bibendum. Donec luctus 
+augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet 
+dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur
+ eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus 
+suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu 
+urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt 
+eget purus in interdum. Cum sociis natoque penatibus et magnis dis 
+parturient montes, nascetur ridiculus mus.</p>
+        </article>
+        <aside><h2>Other things</h2>
+            <p>Nam vulputate diam nec tempor bibendum. Donec luctus 
+augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet 
+dapibus ut, facilisis sed est.</p></aside>
+        <footer>Contact me@mysite.com</footer>
+		<div>ABC Company</div>
+    </div>
+
+	<div class="acknowledgment">Supported by: <a href="http://itest.com.vn">iTest Team</a></div>
+</body></html>

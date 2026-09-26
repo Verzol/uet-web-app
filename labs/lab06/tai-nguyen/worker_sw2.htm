@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Shared worker 2</title>
+ </head><body>
+	<button class="inc">Increase</button>
+	<span class="result"></span>
+    <script>
+		let worker = new SharedWorker("sw.js");
+		
+		document.querySelector(".inc").onclick = function() {
+			worker.port.postMessage("inc");
+		};
+
+		worker.port.onmessage = function(e) {
+			document.querySelector(".result").innerHTML = e.data;
+		};
+    </script>
+  </body>
+</html>
+

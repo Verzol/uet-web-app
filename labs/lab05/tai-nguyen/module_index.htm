@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><head>
+	<title>JavaScript module</title>
+	<meta charset="utf-8">
+	<style>
+		div.acknowledgment {color:#999;font-size:x-small;text-align:center;margin-top:30px;margin-bottom:30px;}
+		a {text-decoration:none;}
+	</style>
+</head><body>
+<h1>JavaScript module</h1>
+<b>Hướng dẫn:</b> Mở xem nguồn trang (View Page Source) để đọc mã nguồn, đồng thời mở console của trình duyệt để xem kết quả (output).
+<script type="module">
+	//
+	// thay vì import từng feature
+	// có thể import tất cả fetures và tạo module object
+	
+	
+	//
+	//
+	// synchronous 
+	import *  as HRM from './lib.js';
+
+	
+	let p1 = new HRM.PersonF("Hoàng Tùng", "Bolero");
+	p1.sayHello(); //Hoàng Tùng Bolero
+
+	let p2 = new HRM.PersonC("Trần Bình", "Ballad");
+	p2.sayHello(); // Trần Bình Ballad
+
+
+	console.log(typeof(HRM.PersonF)); // function
+	console.log(typeof(HRM.PersonC)); // function
+	
+		
+	let staff = new HRM.StaffF("Hoàng Ngân", "Diamon", 1000);
+	staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+	staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+
+
+	staff = new HRM.StaffC("Trần Bình", "Ballad", 1000);
+	staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+	staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+	
+	
+	staff = new HRM.StaffD("Trần Bình", "Ballad", 1000);
+	staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+	staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+	
+	
+	console.log(typeof(HRM.StaffF)); // function
+	console.log(typeof(HRM.StaffC)); // function
+	console.log(typeof(HRM.StaffD)); // function
+	
+	
+	
+	//
+	//
+	// asynchronous
+	import('./lib.js').then(HRM => {
+		let p1 = new HRM.PersonF("Hoàng Tùng", "Bolero");
+		p1.sayHello(); //Hoàng Tùng Bolero
+
+		let p2 = new HRM.PersonC("Trần Bình", "Ballad");
+		p2.sayHello(); // Trần Bình Ballad
+
+
+		console.log(typeof(HRM.PersonF)); // function
+		console.log(typeof(HRM.PersonC)); // function
+		
+			
+		let staff = new HRM.StaffF("Hoàng Ngân", "Diamon", 1000);
+		staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+		staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+
+
+		staff = new HRM.StaffC("Trần Bình", "Ballad", 1000);
+		staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+		staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+		
+		
+		staff = new HRM.StaffD("Trần Bình", "Ballad", 1000);
+		staff.sayHello(); // Hoàng Ngân Diamon with salary 1000 
+		staff.sayGoodbye(); // Hoàng Ngân good bye everyone!
+		
+		
+		console.log(typeof(HRM.StaffF)); // function
+		console.log(typeof(HRM.StaffC)); // function
+		console.log(typeof(HRM.StaffD)); // function
+	});
+	
+</script>
+<div class="acknowledgment"> Supported by: <a href="http://itest.com.vn">iTest Team</a>.</div>
+</body></html>
+

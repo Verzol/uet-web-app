@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <title>Dedicated worker 1</title>
+ </head><body>
+	<button class="inc">Increase</button>
+	<span class="result"></span>
+    <script>
+		let worker = new Worker("dw.js");
+		
+		document.querySelector(".inc").onclick = function() {
+			worker.postMessage("inc");
+		};
+
+		worker.onmessage = function(e) {
+			document.querySelector(".result").innerHTML = e.data;
+		};
+    </script>
+  </body>
+</html>
+

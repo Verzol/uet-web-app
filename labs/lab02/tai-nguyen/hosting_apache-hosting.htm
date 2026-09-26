@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+	<meta name="meta data" http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Apache hosting</title>
+	<meta name="generator" content="LibreOffice 5.0.3.2 (Linux)">
+	<meta name="author" content="Do Hoang Kien">
+	<meta name="created" content="2012-12-07T13:27:00">
+	<meta name="changedby" content="thanh ">
+	<meta name="changed" content="2016-01-21T16:23:43.936766292">
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin-right: 0.79in; margin-top: 0.79in; margin-bottom: 0.79in }
+		p { margin-bottom: 0.1in; direction: ltr; color: #000000; line-height: 120%; text-align: justify; orphans: 2; widows: 2 }
+		p.western { font-family: "Times New Roman", serif; font-size: 13pt; so-language: en-US }
+		p.cjk { font-family: "Times New Roman", serif; font-size: 13pt; so-language: zh-CN }
+		p.ctl { font-family: "Times New Roman", serif; font-size: 13pt; so-language: ar-SA }
+		h2 { margin-top: 0.17in; margin-bottom: 0.04in; direction: ltr; color: #000000; line-height: 130%; text-align: justify; orphans: 2; widows: 2 }
+		h2.western { font-family: "Arial", sans-serif; font-size: 13pt; so-language: en-US; font-style: italic }
+		h2.cjk { font-family: "Times New Roman", serif; font-size: 13pt; so-language: zh-CN; font-style: italic }
+		h2.ctl { font-family: "Arial", sans-serif; font-size: 14pt; so-language: ar-SA; font-style: italic }
+		h3 { margin-left: 0.16in; margin-top: 0.17in; margin-bottom: 0.04in; direction: ltr; color: #000000; line-height: 130%; text-align: justify; orphans: 2; widows: 2 }
+		h3.western { font-family: "Times New Roman", serif; font-size: 13pt; so-language: en-US }
+		h3.cjk { font-family: "Times New Roman", serif; font-size: 13pt; so-language: zh-CN }
+		h3.ctl { font-family: "Arial", sans-serif; font-size: 13pt; so-language: ar-SA }
+		h4 { margin-top: 0.17in; margin-bottom: 0.04in; direction: ltr; color: #000000; line-height: 130%; text-align: justify; orphans: 2; widows: 2 }
+		h4.western { font-family: "Times New Roman", serif; font-size: 14pt; so-language: en-US }
+		h4.cjk { font-family: "Times New Roman", serif; font-size: 14pt; so-language: zh-CN }
+		h4.ctl { font-family: "Times New Roman", serif; font-size: 14pt; so-language: ar-SA }
+		a:link { color: #0000ff }
+		div.itest-container {max-width:650px;margin-left:auto;margin-right:auto;}
+	</style>
+</head>
+<body dir="ltr" lang="en-US" link="#0000ff" text="#000000">
+<div class="itest-container">
+
+
+<p style="margin-top: 0.17in; margin-bottom: 0.25in; line-height: 130%" align="left">
+<font style="font-size: 16pt" size="4"><b>APACHE HOSTING</b></font></p>
+<h2 class="western">1.Giới thiệu</h2>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Apache là một chương trình máy chủ HTTP. Apache chạy trên
+các hệ điều hành tương tự như Unix, Microsoft Windows,
+Novell Netware và các hệ điều hành khác. Apache đóng một
+vai trò quan trọng trong quá trình phát triển của mạng
+web thế giới.</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Apache được phát triển và duy trì bở một cộng đồng
+mã nguồn mở dưới sự bảo trợ của Apache Software
+Foundation. Apache được phát hành với giấy phép Apache
+License và là một phần mềm tự do và miễn phí.</p>
+<h2 class="western">2.Cài đặt và cấu hình</h2>
+
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%; orphans: 2; widows: 2" align="justify">
+Yêu cầu: Cài đặt web server, cài đặt và cấu hình hai
+ ứng dụng web với địa chỉ truy cập lần lượt là</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%; orphans: 2; widows: 2" align="justify">
+<font color="#0000ff"><font color="#000000"><span style="text-decoration: none">-
+Bản tin: </span></font></font><font color="#0000ff">bulletin.any.com.vn</font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%; orphans: 2; widows: 2" align="justify">
+<font color="#000000">- Quản lý nhân sự:</font><font color="#0000ff">
+hrm.any.com.vn</font></p>
+<h3 class="western" style="margin-left: 0in; line-height: 130%; orphans: 2; widows: 2; page-break-after: avoid" align="justify">
+2.1.Chuẩn bị</h3>
+<p>Server chạy hệ điều hành <a href='https://almalinux.org' target="_blank">AlmaLinux</a></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Để kiểm thử được kết quả cài đặt, cụ thể là
+sử dụng tên miền để truy cập ứng dụng web, hãy mở
+tệp hosts, đưa ba tên miền ở trên vào tệp này và cùng
+ánh xạ đến địa chỉ IP của web server.</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Trong Terminal, chạy lệnh sau để mở tệp hosts</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<font color="#0000ff">sudo gedit /etc/hosts</font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Thêm các dòng sau vào cuối tệp hosts</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%; orphans: 2; widows: 2" align="justify">
+<font color="#0000ff">127.0.0.1      bulletin.any.com.vn</font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%; orphans: 2; widows: 2" align="justify">
+<font color="#0000ff">127.0.0.1      hrm.any.com.vn </font>
+</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Lưu và đóng gedit.</p>
+<h3 class="western" style="margin-left: 0in; line-height: 130%; orphans: 2; widows: 2; page-break-after: avoid" align="justify">
+2.2.Cài đặt Apache Server</h3>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Kiểm tra gói httpd (cài đặt nếu chưa có)</p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+sudo rpm -qa httpd</font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Cài đặt gói httpd nếu chưa có:</p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+sudo dnf install httpd -y</font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+Kiểm tra Server có mở port 80/tcp chưa?</p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+netstat -ltn</font></font></font></p>
+<h3 class="western" style="margin-left: 0in; line-height: 130%; orphans: 2; widows: 2; page-break-after: avoid" align="justify">
+2.3.Khởi động Apache</h3>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+sudo systemctl start httpd</font></font></font></p>
+<h3 class="western" style="margin-left: 0in; line-height: 130%; orphans: 2; widows: 2; page-break-after: avoid" align="justify">
+2.4.Cấu hình</h3>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Các tệp cấu hình</p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Thư mục chứa các tệp cấu hình: <b>/etc/httpd/conf</b></p>
+	</li><li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	File cấu hình chính: <b>/etc/httpd/conf/httpd.conf</b></p>
+</li></ul>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%">
+Lưu ý: Tùy vào hệ điều hành và gói cài đặt Apache,
+thư mục chứa các tệp cấu  hình có thể khác nhau. Ví
+dụ,
+</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%">
+Trên Ubuntu, thư mục chứa các tệp cấu hình là</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%">
+/etc/apache2</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%">
+Trên Windows, với gói cài đặt XAMMP, thư mục chứa các
+tệp cấu hình là</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%">
+C:\xampp\apache\conf</p>
+<p><b>Cấu hình cơ bản</b></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+Chỉnh sửa file cấu hình <b>httpd.conf</b></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+<font color="#b3b3b3">#Cấu hình ứng dụng lắng nghe ở cổng
+80 (mặc định)</font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><span lang="fr-FR"><b>Listen</b></span></font><font color="#0000ff"><span lang="fr-FR">
+80</span></font></font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; font-weight: normal; line-height: 130%" lang="fr-FR">
+<font color="#b3b3b3">#Cấu hình email của user quản trị Web
+Server là admin@testweb.vnu.edu.vn</font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><span lang="fr-FR"><b>ServerAdmin</b></span></font><font color="#0000ff"><span lang="fr-FR">
+admin@any.com.vn</span></font></font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<font color="#b3b3b3"><span lang="fr-FR">#Đặt tên cho website
+chính là </span></font><font color="#b3b3b3"><span lang="fr-FR"><b>www.testweb.vnu.edu.vn</b></span></font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><b>ServerName</b></font><font color="#0000ff">
+127.0.0.1</font></font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Khởi động lại dịch vụ httpd:</p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">service
+httpd restart</font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+Sử dụng thư mục gốc mặc định là <b>/var/www/html/</b>,
+tạo file <font color="#0000ff"><span lang="fr-FR">i</span></font><font color="#000000"><span lang="fr-FR">ndex.htm
+trong thư mục này </span></font><font color="#000000">với nội
+dung bất kỳ</font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%" lang="fr-FR">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">gedit
+/var/www/html/index.htm</font></font></font></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+Mở trình duyệt kiểm tra</p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<span lang="fr-FR">	</span><font color="#0000ff"><span lang="fr-FR">http://127.0.0.1</span></font></p>
+<p><b>Thay đổi thư mục gốc</b></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo thư mục<font color="#0000ff"> </font><font color="#000000">/data/web</font></p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">mkdir
+/data</font></font></font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">mkdir
+/data/web</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo tệp index.htm trong thư mục /data/web  với nội dung
+	bất kỳ<font color="#0000ff"> </font><font color="#000000">khác
+	nội dung tệp </font><font color="#000000"><span lang="fr-FR">/var/www/html/index.htm</span></font></p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">gedit
+/data/web/index.htm</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Sửa file cấu hình <b>httpd.conf</b>, tìm dòng <b>DocumentRoot</b>,
+	thay thế nội dung như sau:
+	</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><b>DocumentRoot</b></font><font color="#0000ff">
+"/data/web"</font></font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Khởi động lại dịch vụ httpd</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">service
+httpd restart</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	<font style="font-size: 13pt" size="3">Mở trình duyệt kiểm tra</font></p>
+</li></ul>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+<font color="#0000ff">	http://127.0.0.1</font></p>
+<p><b>Thay đổi tài nguyên mặc định</b></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo tệp <font color="#000000">home.htm trong thư mục
+	/data/web </font>với nội dung bất kỳ<font color="#0000ff">
+	</font><font color="#000000">khác nội các tệp </font><font color="#000000"><span lang="fr-FR">index.htm
+	ở trên</span></font></p>
+</li></ul>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<font color="#0000ff">	gedit /data/web/home.htm</font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Sửa file cấu hình <b>httpd.conf</b>, tìm dòng <b>DirectoryIndex</b>,
+	thay thế nội dung như sau:
+	</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><b>DirectoryIndex</b></font><font color="#0000ff">
+home.htm</font></font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Khởi động lại dịch vụ httpd</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">service
+httpd restart</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	<font style="font-size: 13pt" size="3">Mở trình duyệt kiểm tra</font></p>
+</li></ul>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%" lang="fr-FR">
+<font color="#0000ff">	http://127.0.0.1</font></p>
+<p><b>Xem log của httpd</b>
+			</p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Error log:</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%" lang="fr-FR">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+tail -f /var/log/httpd/error_log</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Access<span lang="fr-FR"> log:</span></p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%" lang="fr-FR">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">#
+tail -f /var/log/httpd/access_log</font></font></font></p>
+<p><b>Cấu hình thư mục ảo</b></p>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<span lang="fr-FR">Cấu hình server sao cho khi truy cập
+</span><span lang="fr-FR"><b>127.0.0.1/soft/</b></span><span lang="fr-FR">
+sẽ truy xuất vào thư mục </span><span lang="fr-FR"><b>/chiase/phanmem
+</b></span><span lang="fr-FR"><span style="font-weight: normal">trên
+filesystem của Web server</span></span><span lang="fr-FR"><b>.</b></span><span lang="fr-FR"><span style="font-weight: normal">
+</span></span><span lang="fr-FR"><i><span style="font-weight: normal">/soft</span></i></span><span lang="fr-FR"><span style="font-weight: normal">
+được gọi là thư mục ảo và được ánh xạ đến thư
+mục thật là </span></span><span lang="fr-FR"><i><span style="font-weight: normal">/chiase/phanmem</span></i></span><span lang="fr-FR"><span style="font-weight: normal">.</span></span></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	<span lang="fr-FR">Sửa file cấu hình </span><span lang="fr-FR"><b>httpd.conf</b></span><span lang="fr-FR">,
+	thêm vào cuối file cấu hình dòng sau:</span></p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><b>Alias</b></font><font color="#0000ff">
+/soft/ "/chiase/phanmem/"</font></font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo file <b>/chiase/phanmem/index.htm </b><font color="#000000"><span style="font-weight: normal">với
+	nội dung bất kỳ</span></font></p>
+	</li><li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Khởi động lại dịch vụ httpd:</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">service
+httpd restart</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Mở trình duyệt kiểm tra
+	</p>
+</li></ul>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+<span style="font-weight: normal">	</span><font color="#0000ff"><span style="font-weight: normal">http://127.0.0.1/soft/</span></font></p>
+<p><b>
+				Hosting nhiều ứng dụng</b>
+			</p>
+<h3 class="western" style="margin-left: 0in; font-weight: normal; line-height: 130%; orphans: 2; widows: 2" align="justify">
+Web server quản lý nhiều ứng dụng web và cung cấp khả
+năng truy cập ứng dụng web qua socket hoặc domain. Mỗi ứng
+dụng web được buộc (binding) với một hoặc nhiều
+sockets, có thể buộc thêm một tên miền.</h3>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Sửa file cấu hình <b>httpd.conf</b> như sau:
+	</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">NameVirtualHost
+*:80</font></font></font></p>
+<p class="western" style="margin-left: 0.5in; margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+thêm vào cuối file cấu hình <span lang="fr-FR">đoạn sau:</span></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff"><span lang="fr-FR">&lt;VirtualHost
+*</span></font><font color="#0000ff">:80</font><font color="#0000ff"><span lang="fr-FR">&gt;</span></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">ServerAdmin
+</font><font color="#0000ff"><b>webmaster@any.com.vn</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">DocumentRoot
+</font><font color="#0000ff"><b>/data/web1</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">ServerName
+</font><font color="#0000ff"><b>bulletin</b></font><font color="#0000ff"><b>.any.com.vn</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">ErrorLog
+logs/bulletin.any.com.vn-error_log</font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">CustomLog
+logs/bulletin.any.com.vn-access_log common</font></font></font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">&lt;/VirtualHost&gt;</font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<br>
+<br>
+
+</p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">&lt;VirtualHost
+*:80&gt;</font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">ServerAdmin
+</font><font color="#0000ff"><b>hrm</b></font><font color="#0000ff"><b>admin@any.com.vn</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">DocumentRoot
+</font><font color="#0000ff"><b>/data/web2</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">ServerName
+</font><font color="#0000ff"><b>hrm</b></font><font color="#0000ff"><b>.any.com.vn</b></font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#c00000"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"><font color="#0000ff">ErrorLog
+logs/h</font><font color="#0000ff"><span style="font-weight: normal">rm</span></font><font color="#0000ff">.any.com.vn-error_log</font></font></font></font></p>
+<p style="margin-left: 1in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">CustomLog
+logs/hrm.any.com.vn-access_log common</font></font></font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">&lt;/VirtualHost&gt;</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo các thư mục <b>/data/web1</b> và <b>/data/web2</b>
+	</p>
+	</li><li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Tạo các file <b>/data/web1/index.htm </b>và <b>/data/web2/index.htm
+	</b><span style="font-weight: normal">với nội dung bất kỳ</span></p>
+	</li><li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	Khởi động lại dịch vụ httpd:</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2"> 
+sudo systemctl stop httpd<br>
+sudo systemctl start httpd</font></font></font></p>
+<ul>
+	<li>
+<p class="western" style="margin-top: 0.06in; margin-bottom: 0.06in; line-height: 130%">
+	<font color="#000000">Mở trình duyệt k</font>iểm tra  các
+	ứng dụng web<font color="#0000ff">, </font>
+	</p>
+</li></ul>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">bulletin.any.com.vn</font></font></font></p>
+<p style="margin-left: 0.47in; margin-top: 0.03in; margin-bottom: 0.03in; font-weight: normal; line-height: 100%">
+<font color="#0000ff"><font face="Courier New, monospace"><font style="font-size: 11pt" size="2">hrm.any.com.vn</font></font></font></p>
+
+</div> <!-- .itest-container -->
+</body></html>
