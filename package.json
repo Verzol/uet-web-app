@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Tài liệu học INT3306 - Phát triển ứng dụng web",
   "scripts": {
-    "assets": "node scripts/extract-assets.mjs"
+    "assets": "node scripts/extract-assets.mjs",
+    "lab:export": "node scripts/export-lab.mjs"
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^11.4.2"

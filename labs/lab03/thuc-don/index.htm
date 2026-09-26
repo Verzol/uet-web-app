@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<title>Lab. Thực đơn</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Verdana, sans-serif;
+			font-size: 13px;
+		}
+
+		.layout {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		/* Thực đơn dọc */
+		ul.thucdon {
+			width: 240px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		ul.thucdon li {
+			padding: 5px 0 5px 5px;
+			border-top: 1px solid #fefefe;
+			border-left: 1px solid #fefefe;
+			border-right: 1px solid #c3c8cb;
+			border-bottom: 1px solid #c3c8cb;
+			background-color: #dee3e7;
+			color: #21536a;
+			cursor: pointer;
+		}
+
+		ul.thucdon li::before {
+			content: "» ";
+		}
+
+		/* Rê chuột: mục sáng lên */
+		ul.thucdon li:hover {
+			background-color: #f8fafc;
+		}
+
+		/* Được chọn: nền xanh. Đặt sau :hover và cùng độ ưu tiên
+		   (1 class + 1 phần tử) nên thắng khi rê lên mục đang chọn */
+		ul.thucdon li.duoc-chon {
+			background-color: #00fafc;
+		}
+
+		/* Tiêu đề mục được chọn hiện bên phải */
+		#noi-dung {
+			padding: 5px 10px;
+			color: #0000ff;
+		}
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<ul class="thucdon">
+			<li>Quản lý cán bộ (Đăng ký thông tin)</li>
+			<li>Phân quyền</li>
+			<li>Cổng thông tin đào tạo và người học</li>
+			<li>Quản lý văn bản và hồ sơ công việc</li>
+			<li>Hành chính công</li>
+			<li>Hệ thống thông tin báo cáo</li>
+		</ul>
+		<div id="noi-dung"></div>
+	</div>
+
+	<script>
+		const cacMuc = document.querySelectorAll("ul.thucdon li");
+		const noiDung = document.getElementById("noi-dung");
+
+		cacMuc.forEach(function (muc) {
+			muc.addEventListener("click", function () {
+				// Bỏ chọn mục cũ, chọn mục mới
+				cacMuc.forEach(function (m) { m.classList.remove("duoc-chon"); });
+				muc.classList.add("duoc-chon");
+
+				// Hiện tiêu đề mục được chọn ở bên phải
+				noiDung.textContent = "» " + muc.textContent;
+			});
+		});
+	</script>
+</body>
+</html>

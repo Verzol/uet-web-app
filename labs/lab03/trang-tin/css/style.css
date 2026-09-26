@@ -1,0 +1,157 @@
+/* Lab. Trang tin – bố cục top / middle (left, center, right) / bottom bằng float */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Times New Roman", serif;
+}
+
+#container {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ---------- Bước 1: bố cục ---------- */
+
+#top {
+	height: 160px;
+	background: #fff000 url('../images/banner.png') no-repeat;
+}
+
+#left, #center, #right {
+	display: inline;
+	float: left;
+}
+
+#left {
+	width: 165px;
+	margin-top: 20px;
+}
+
+#center {
+	width: 605px;
+	padding: 20px;
+}
+
+#right {
+	width: 170px;
+	margin-top: 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+#bottom {
+	background-color: #9d2224;
+}
+
+/* ---------- Bước 2: nội dung từng vùng ---------- */
+
+/* Thanh menu ngang dưới banner, menu con hiện khi rê chuột */
+ul.droplinemenu {
+	position: relative;
+	margin: 16px 0 0 0;
+	padding: 5px 40px;
+	background: #2f8d9a;
+}
+
+ul.droplinemenu > li {
+	display: inline;
+	padding: 5px 10px;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+ul.droplinemenu > li:hover {
+	background: #cdcdcd;
+}
+
+ul.droplinemenu > li > ul {
+	display: none;
+	position: absolute;
+	top: 29px;
+	left: 0;
+	width: 940px;
+	margin: 0;
+	padding: 5px 20px;
+	background: #cdcdcd;
+}
+
+ul.droplinemenu > li:hover > ul {
+	display: block;
+}
+
+ul.droplinemenu > li > ul > li {
+	display: inline;
+	list-style-type: none;
+	padding: 5px 10px;
+}
+
+ul.droplinemenu > li > ul > li:hover {
+	color: red;
+}
+
+/* Menu dọc bên trái: mỗi mục là một nút nền bgmenu.gif */
+ul.single-vertical-menu {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+ul.single-vertical-menu li {
+	height: 45px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: url('../images/bgmenu.gif') no-repeat;
+}
+
+ul.single-vertical-menu li > a {
+	position: relative;
+	top: 10px;
+	left: 5px;
+	text-decoration: none;
+	color: #6a1b9a;
+	cursor: pointer;
+}
+
+ul.single-vertical-menu li > a:hover {
+	color: red;
+}
+
+/* Ảnh logo liên kết ở hai cột bên */
+.linkedimg {
+	display: block;
+	max-width: 100%;
+	margin-bottom: 4px;
+	border: #920001 1px solid;
+	cursor: pointer;
+}
+
+#center h2 {
+	margin-top: 0;
+}
+
+#center p {
+	text-align: justify;
+	line-height: 1.3;
+}
+
+/* Chân trang chia hai cột, cũng dùng float */
+#owner {
+	display: inline;
+	float: left;
+	width: 660px;
+	padding: 20px;
+	color: #ffffff;
+}
+
+#developer {
+	display: inline;
+	float: left;
+	width: 240px;
+	padding: 20px;
+	color: #999999;
+	text-align: right;
+}

@@ -18,6 +18,17 @@ Xem bảng trong `README.md`. Tóm tắt: `syllabus/`, `notes/` (ghi chú theo b
 - Sau mỗi lần viết hoặc sửa nội dung một note, chạy skill `humanizer` trên file đó.
 - Sau khi note ổn, chạy `npm run assets` (hoặc lệnh `/as`) để cập nhật `assets/`.
 
+## Quy tắc làm lab
+
+- Đề mỗi buổi nằm ở `labs/labXX/README.md` (XX = số tuần), file đề cho sẵn ở `labs/labXX/tai-nguyen/`. Không sửa `tai-nguyen/`.
+- Mỗi bài là một thư mục `labs/labXX/<slug-bài>/` không dấu, trang chính là `index.htm`. Thư mục phải tự chạy được: ảnh, CSS, JS để bên trong và gọi bằng đường dẫn tương đối.
+- Làm đủ mọi ý trong checklist của đề, bám ảnh giao diện mẫu. Tự viết mã, không chép bài mẫu.
+- HTML phải qua validator Nu (`https://html5.validator.nu/?out=gnu`) không lỗi. Khai báo `<!DOCTYPE html>`, `lang`, `<meta charset="utf-8">`.
+- CSS đặt thành class; JavaScript đổi trạng thái bằng `classList`, không sửa `style` trực tiếp.
+- Tên biến, class, comment dùng tiếng Việt không dấu hoặc tiếng Anh, thống nhất trong một bài.
+- Làm xong thì chạy `node scripts/export-lab.mjs labXX` để sinh zip nộp Portal vào `labs/labXX/nop-bai/`. Tiền tố MSSV và họ tên lấy từ `.local/sinh-vien.json` (`{"mssv": "...", "hoTen": "..."}`).
+- Claude không tự nộp bài lên Portal.
+
 ## Quy tắc chung
 
 - Không sửa tay file trong `assets/`; để `scripts/extract-assets.mjs` sinh.
@@ -28,3 +39,4 @@ Xem bảng trong `README.md`. Tóm tắt: `syllabus/`, `notes/` (ghi chú theo b
 
 - `/note <tên-bài>` – fetch nguồn của bài từ trang môn học, tổng hợp thành `notes/bai-XX-*.md`.
 - `/as [tên-bài]` – sinh sơ đồ trong `assets/` từ `notes/`.
+- `/lab <labXX> [tên bài]` – làm lab theo đề, kiểm tra, đóng gói zip nộp Portal.
