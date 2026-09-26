@@ -57,7 +57,7 @@ Hàng tab "Tab 1 … Tab 4", bên dưới là vùng tải trang (ảnh `tab_lab5
 | Letter | `letter/` | Dùng `<dl>` cho danh sách điệu nhảy vì mỗi mục có tên và định nghĩa |
 | Trang tin | `trang-tin/` | Dùng ảnh trong `template.rar`; CSS viết lại theo id `top/middle/left/center/right/bottom` của đề |
 | Thực đơn | `thuc-don/` | Rê chuột dùng `:hover`, trạng thái chọn dùng class `duoc-chon` |
-| Tab | `tab/` | iframe tải trang nội bộ `tab/trang/tab1..4.htm`. Không dùng báo điện tử như bài mẫu vì các trang đó chặn nhúng iframe (`X-Frame-Options`) |
+| Tab | `tab/` | iframe tải trang web thật: VNU, Dân trí, Znews, Wikipedia tiếng Việt. Không dùng VnExpress, Tuổi Trẻ, Thanh Niên, VOA vì các trang này chặn nhúng iframe (`X-Frame-Options`/`frame-ancestors`). Cần mạng khi chạy |
 
 Cả bốn trang đều qua validator Nu không lỗi. Zip nộp bài: `nop-bai/`, sinh bằng `node scripts/export-lab.mjs lab03`.
 

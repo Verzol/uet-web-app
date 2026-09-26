@@ -37,40 +37,39 @@
 
 		iframe {
 			width: 100%;
-			height: 500px;
+			height: 600px;
 			border: 1px solid #999;
 		}
 	</style>
 </head>
 <body>
+	<!-- Mỗi tab ghi địa chỉ trang cần tải trong data-url -->
 	<ul class="tabs">
-		<li data-trang="trang/tab1.htm">Tab 1</li>
-		<li data-trang="trang/tab2.htm">Tab 2</li>
-		<li data-trang="trang/tab3.htm">Tab 3</li>
-		<li data-trang="trang/tab4.htm">Tab 4</li>
+		<li data-url="https://vnu.edu.vn" title="Đại học Quốc gia Hà Nội">Tab 1</li>
+		<li data-url="https://dantri.com.vn" title="Dân trí">Tab 2</li>
+		<li data-url="https://znews.vn" title="Znews">Tab 3</li>
+		<li data-url="https://vi.wikipedia.org" title="Wikipedia tiếng Việt">Tab 4</li>
 	</ul>
 	<hr>
-	<iframe id="khung" title="Nội dung tab"></iframe>
+	<iframe id="khung" title="Trang của tab đang chọn"></iframe>
 
 	<script>
 		const cacTab = document.querySelectorAll("ul.tabs li");
 		const khung = document.getElementById("khung");
 
-		function chonTab(tab) {
-			// Bỏ chọn tab cũ, tô xanh tab mới
-			cacTab.forEach(function (t) { t.classList.remove("duoc-chon"); });
-			tab.classList.add("duoc-chon");
-
-			// Tải trang tương ứng vào iframe
-			khung.src = tab.dataset.trang;
-		}
-
 		cacTab.forEach(function (tab) {
-			tab.addEventListener("click", function () { chonTab(tab); });
+			tab.addEventListener("click", function () {
+				// Bỏ chọn tab cũ, tô xanh tab mới
+				cacTab.forEach(function (t) { t.classList.remove("duoc-chon"); });
+				tab.classList.add("duoc-chon");
+
+				// Tải trang tương ứng vào iframe
+				khung.src = tab.dataset.url;
+			});
 		});
 
 		// Mở sẵn tab đầu tiên
-		chonTab(cacTab[0]);
+		cacTab[0].click();
 	</script>
 </body>
 </html>
